@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Репортаж из мобильного центра безопасности МЧС — обучение через технологии">
+  <title>Дым, сирена, лабиринт — Мобильный центр безопасности</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="siren-overlay" aria-hidden="true"></div>
+  <canvas id="smoke-canvas" aria-hidden="true"></canvas>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a
+        href="https://www.sb.by/"
+        class="logo"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="SB.BY — МЧС"
+      >
+        <img
+          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E"
+          data-defer-src="img/logo.png"
+          alt=""
+          class="logo-img"
+          width="40"
+          height="40"
+          decoding="async"
+        />
+        <span class="logo-text">
+          <span class="logo-text__brand">
+            <span class="logo-text__letters" data-letters="SB">SB</span><span class="logo-text__dot">·</span><span class="logo-text__suffix">BY</span>
+          </span>
+          <span class="logo-text__tagline" aria-hidden="true">МЧС</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#gadgets" class="nav__link" data-section="gadgets">Ставка на гаджеты</a>
+        <a href="#danger" class="nav__link" data-section="danger">Распознать опасность</a>
+        <a href="#algorithm" class="nav__link" data-section="algorithm">Правильный алгоритм</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grid"></div>
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="pulse-dot"></span>
+          Живой репортаж
+        </div>
+        <h1 class="hero__title">
+          <span class="hero__title-line hero__title-line--smoke">Дым,</span>
+          <span class="hero__title-line hero__title-line--siren">сирена,</span>
+          <span class="hero__title-line hero__title-line--maze">лабиринт</span>
+        </h1>
+        <p class="hero__subtitle">Мобильный центр безопасности — обучение через технологии</p>
+        <p class="hero__desc">Репортаж из недавно созданного мобильного центра безопасности жизнедеятельности МЧС в детском оздоровительном лагере «Планета»</p>
+        <div class="hero__actions">
+          <a href="#intro" class="btn btn--primary">Читать репортаж</a>
+          <button class="btn btn--ghost" id="siren-btn" aria-label="Включить сирену">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3L4 9V15L12 21L20 15V9L12 3Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+            Сирена
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro" id="intro">
+      <div class="intro__bg" aria-hidden="true"></div>
+      <div class="container intro__container">
+        <blockquote class="quote quote--large">
+          <span class="quote__mark">«</span>
+          <p>Пригнитесь! Дышите через локоть! Смотрите на указатели!</p>
+          <cite>— инструктирует детей сотрудник МЧС перед входом в игровой лабиринт</cite>
+        </blockquote>
+        <div class="intro__text reveal">
+          <p>Внутри — густой дым, вой сирены и почти нулевая видимость. Через несколько минут ребята выходят уже с четким пониманием того, как действовать при пожаре. Так в детском оздоровительном лагере <strong>«Планета»</strong> в Минском районе презентовали недавно созданный мобильный центр безопасности жизнедеятельности МЧС.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GADGETS -->
+    <section class="section section--gadgets" id="gadgets">
+      <div class="section__bg" aria-hidden="true"></div>
+      <div class="section__header container reveal">
+        <h2 class="section__title">Ставка на гаджеты</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="container">
+        <div class="split reveal">
+          <div class="split__visual">
+            <div class="mini-gallery" aria-label="Фотогалерея мобильного центра">
+              <button type="button" class="mini-gallery__item mini-gallery__item--main" data-gallery-index="0" aria-label="Открыть фото: Мобильный центр безопасности МЧС">
+                <img src="img/galery/1.jpg" alt="Мобильный центр безопасности МЧС" width="600" height="400" loading="lazy" decoding="async">
+              </button>
+              <button type="button" class="mini-gallery__item" data-gallery-index="1" aria-label="Открыть фото: Интерактивное обучение детей">
+                <img src="img/galery/2.jpg" alt="Интерактивное обучение детей" width="300" height="200" loading="lazy" decoding="async">
+              </button>
+              <button type="button" class="mini-gallery__item" data-gallery-index="2" aria-label="Открыть фото: Тренажёры и технологии в центре">
+                <img src="img/galery/3.jpg" alt="Тренажёры и технологии в центре" width="300" height="200" loading="lazy" decoding="async">
+              </button>
+              <button type="button" class="mini-gallery__item" data-gallery-index="3" aria-label="Открыть фото: Занятия в мобильном автобусе МЧС">
+                <img src="img/galery/4.jpg" alt="Занятия в мобильном автобусе МЧС" width="300" height="200" loading="lazy" decoding="async">
+              </button>
+              <button type="button" class="mini-gallery__item" data-gallery-index="4" aria-label="Открыть фото: Интерактивная кухня и бытовые опасности">
+                <img src="img/galery/5.jpg" alt="Интерактивная кухня и бытовые опасности" width="300" height="200" loading="lazy" decoding="async">
+              </button>
+            </div>
+          </div>
+          <div class="split__content">
+            <p class="lead">Снаружи центр выглядит как обычный автобус МАЗ с гармошкой, только оформленный в фирменных цветах службы спасения. Но внутри — это уже не просто транспорт, а полноценный интерактивный комплекс.</p>
+            <p>С помощью новейших технологий учат главному — <em>сохранять жизнь и здоровье</em>.</p>
+          </div>
+        </div>
+
+        <blockquote class="quote quote--speaker reveal">
+          <p class="quote--speaker__lead">Начальник центра пропаганды безопасности жизнедеятельности Минского городского управления МЧС Карина Закалинская рассказывает, что детей сложно заинтересовать лекцией, поэтому ставку сделали на виртуальную и дополненную реальность, интерактивные игры и тренажеры:</p>
+          <p class="quote--speaker__said">– Мы задействовали буквально каждый сантиметр пространства, чтобы в игровой форме показать алгоритмы действий в различных ситуациях. Технологии помогают достучаться до молодого поколения, и мы видим в этом большую перспективу.</p>
+        </blockquote>
+
+        <div class="journey reveal">
+          <div class="journey__steps">
+            <div class="step-card step-card--photo">
+              <div class="step-card__media">
+                <img src="img/driver/1.jpg" alt="Экипировка пожарного" width="400" height="260" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="step-card step-card--photo">
+              <div class="step-card__media">
+                <img src="img/driver/2.jpg" alt="Вызов диспетчера" width="400" height="260" loading="lazy" decoding="async">
+              </div>
+            </div>
+            <div class="step-card step-card--photo">
+              <div class="step-card__media">
+                <img src="img/driver/3.jpg" alt="Дознаватель на месте пожара" width="400" height="260" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </div>
+          <div class="journey__note">
+            <p class="journey__note-lead">Путешествие по центру начинается с кабины водителя. Вместо привычной приборной панели – планшет с компьютерной игрой. Однако задача участников далека от простого «порулить», говорит представитель МЧС:</p>
+            <p class="journey__note-said">– Ребенок узнает, что водитель пожарного автомобиля – настоящий герой, который не только крутит баранку. Сначала ребята подбирают экипировку, знакомятся с насосным отсеком и оборудованием, а затем получают вызов от диспетчера и мчатся к месту пожара, объезжая пробки и аварии. После тушения на экране появляется полностью выгоревшая квартира – и ребенок превращается в дознавателя. Мы хотим, чтобы дети понимали: практически у каждого возгорания есть причина, и чаще всего ее можно предотвратить.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DANGER -->
+    <section class="section section--danger" id="danger">
+      <div class="section__header container reveal">
+        <h2 class="section__title">Распознать опасность</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="container">
+        <div class="danger-grid reveal">
+          <article class="danger-card danger-card--first-aid">
+            <div class="danger-card__header">
+              <span class="danger-card__icon">+</span>
+              <h3>Первая помощь</h3>
+            </div>
+            <p>На манекенах отрабатывают непрямой массаж сердца, искусственное дыхание и приём Геймлиха.</p>
+          </article>
+
+          <article class="danger-card danger-card--kitchen">
+            <div class="danger-card__header">
+              <span class="danger-card__icon">🔥</span>
+              <h3>Интерактивная кухня</h3>
+            </div>
+            <p>Наводим планшет AR на QR-код — и на плите вспыхивает пламя. Дети учатся, почему нельзя заливать водой горящее масло.</p>
+            <div class="kitchen-flame" aria-hidden="true"></div>
+          </article>
+
+          <article class="danger-card danger-card--home">
+            <div class="danger-card__header">
+              <span class="danger-card__icon">⚠</span>
+              <h3>Бытовые опасности</h3>
+            </div>
+            <p>Окна — не место для игр, горячая духовка может стать причиной ожогов, острые углы требуют осторожности.</p>
+          </article>
+
+          <article class="danger-card danger-card--medkit">
+            <div class="danger-card__header">
+              <span class="danger-card__icon">💊</span>
+              <h3>Игра «Аптечка»</h3>
+            </div>
+            <p>Собрать лекарства в поход, проверить сроки годности. Самостоятельно принимать лекарства нельзя — но ребёнок должен знать, что должно быть в домашней аптечке.</p>
+          </article>
+
+          <article class="danger-card danger-card--vr">
+            <div class="danger-card__header">
+              <span class="danger-card__icon">🥽</span>
+              <h3>VR-тренажёр</h3>
+            </div>
+            <blockquote class="mini-quote">
+              <p>Всё как по-настоящему. Когда автобус лёг набок, я даже немного испугался. Но потом вспомнил: сначала отстегнуть ремень, осмотреться и искать выход.</p>
+              <cite>— Марьян Клакевич, 10 лет</cite>
+            </blockquote>
+          </article>
+
+          <article class="danger-card danger-card--fire">
+            <div class="danger-card__header">
+              <span class="danger-card__icon">🏠</span>
+              <h3>Виртуальный пожар</h3>
+            </div>
+            <p>Два сценария: от удлинителя до сложной эвакуации — около пятнадцати действий: вызвать спасателей, обесточить квартиру, выбрать путь.</p>
+          </article>
+
+          <article class="danger-card danger-card--fraud danger-card--wide">
+            <div class="danger-card__header">
+              <span class="danger-card__icon">🛡</span>
+              <h3>Защита от мошенников</h3>
+            </div>
+            <p>На интерактивных планшетах моделируют схемы мошенничества. Дети учатся вовремя распознавать опасность: не сообщать данные карт, не открывать дверь посторонним.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALGORITHM -->
+    <section class="section section--algorithm" id="algorithm">
+      <div class="section__header container reveal">
+        <h2 class="section__title">Правильный алгоритм</h2>
+        <div class="section__line"></div>
+      </div>
+
+      <div class="labyrinth" aria-label="Имитация задымлённого лабиринта">
+        <div class="labyrinth__fog"></div>
+        <div class="labyrinth__content container">
+          <div class="labyrinth__rules reveal">
+            <h3>Правила перед входом</h3>
+            <ul class="rules-list">
+              <li><span>01</span> Пригнитесь</li>
+              <li><span>02</span> Дышите через локоть</li>
+              <li><span>03</span> Смотрите на указатели</li>
+              <li><span>04</span> Не теряйте группу</li>
+            </ul>
+          </div>
+
+          <blockquote class="quote quote--labyrinth reveal">
+            <p>Я почти ничего не видела, шла на ощупь и старалась не потерять ребят впереди. Теперь понимаю, зачем пригибаться и смотреть на эвакуационные указатели. Было страшновато, но очень интересно.</p>
+            <cite>— Анна Ляшкевич, 11 лет</cite>
+          </blockquote>
+
+          <div class="algorithm-flow reveal">
+            <div class="algo-step">
+              <div class="algo-step__node">🌲</div>
+              <span>Лес</span>
+            </div>
+            <div class="algo-step__arrow"></div>
+            <div class="algo-step">
+              <div class="algo-step__node">💧</div>
+              <span>Вода</span>
+            </div>
+            <div class="algo-step__arrow"></div>
+            <div class="algo-step">
+              <div class="algo-step__node">❄️</div>
+              <span>Лёд</span>
+            </div>
+            <div class="algo-step__arrow"></div>
+            <div class="algo-step">
+              <div class="algo-step__node">⛺</div>
+              <span>Поход</span>
+            </div>
+          </div>
+          <p class="labyrinth__nature reveal">Последний отсек посвящён отдыху на природе: безопасности в лесу, на воде и льду, в походе.</p>
+        </div>
+        <div class="labyrinth__exit-signs" aria-hidden="true">
+          <span class="exit-sign">← ВЫХОД</span>
+          <span class="exit-sign">ВЫХОД →</span>
+          <span class="exit-sign">↑ ВЫХОД</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="finale reveal">
+          <blockquote class="quote quote--finale">
+            <p>Наша задача — сделать так, чтобы правильный алгоритм действий стал для ребёнка привычным. Чтобы в экстренной ситуации он не растерялся, а вспомнил урок. Именно поэтому мы говорим о безопасности понятным ему языком — через технологии, которые детям действительно интересны.</p>
+            <cite>Карина Закалинская</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__author">
+        <p class="footer__name">Юлия МИЩЕНКО</p>
+        <p class="footer__pub">«ЗН» · <a href="mailto:mischenko@sb.by">mischenko@sb.by</a></p>
+        <p class="footer__photo">Фото Марии АМЕЛИНОЙ</p>
+      </div>
+      <div class="footer__brand">
+        <span>Дым, сирена, лабиринт</span>
+        <span class="footer__year">2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="gallery-lightbox" id="gallery-lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
+    <div class="gallery-lightbox__backdrop" data-gallery-close></div>
+    <div class="gallery-lightbox__dialog">
+      <button type="button" class="gallery-lightbox__close" data-gallery-close aria-label="Закрыть">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--prev" data-gallery-prev aria-label="Предыдущее фото">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 6L8 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <figure class="gallery-lightbox__figure">
+        <img class="gallery-lightbox__img" src="" alt="">
+        <figcaption class="gallery-lightbox__caption"></figcaption>
+      </figure>
+      <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--next" data-gallery-next aria-label="Следующее фото">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M10 6L16 12L10 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="gallery-lightbox__counter" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
