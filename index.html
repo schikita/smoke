@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Репортаж из мобильного центра безопасности МЧС — обучение через технологии">
   <title>Дым, сирена, лабиринт — Мобильный центр безопасности</title>
+  <link rel="icon" href="img/mchs-emblem.png" type="image/png">
+  <link rel="apple-touch-icon" href="img/mchs-emblem.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
@@ -160,155 +162,194 @@
 
     <!-- DANGER -->
     <section class="section section--danger" id="danger">
+      <div class="section__bg" aria-hidden="true"></div>
       <div class="section__header container reveal">
         <h2 class="section__title">Распознать опасность</h2>
         <div class="section__line"></div>
       </div>
 
       <div class="container">
-        <div class="danger-grid reveal">
-          <article class="danger-card danger-card--first-aid">
-            <div class="danger-card__header">
-              <span class="danger-card__icon">+</span>
-              <h3>Первая помощь</h3>
-            </div>
-            <p>На манекенах отрабатывают непрямой массаж сердца, искусственное дыхание и приём Геймлиха.</p>
-          </article>
+        <div class="danger-split reveal">
+          <figure class="danger-split__photo">
+            <img
+              src="img/danger-training.jpg"
+              alt="Спасатель МЧС обучает детей на мобильном центре безопасности"
+              width="440"
+              height="330"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
+          <div class="journey__note">
+            <p class="journey__note-lead">В следующем отсеке автобуса мальчишек и девчонок учат оказывать первую помощь. На манекенах они отрабатывают непрямой массаж сердца, искусственное дыхание и прием Геймлиха, если ребенок подавился.</p>
+            <p class="journey__note-lead">Следующая остановка – интерактивная кухня. Наводим планшет дополненной реальности на QR-код – и на плите вспыхивает пламя.</p>
+            <p class="journey__note-said">– Чем будем тушить? – спрашивает спасатель.</p>
+            <p class="journey__note-lead journey__note-lead--last">Дети наперебой предлагают варианты.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <article class="danger-card danger-card--kitchen">
-            <div class="danger-card__header">
-              <span class="danger-card__icon">🔥</span>
-              <h3>Интерактивная кухня</h3>
-            </div>
-            <p>Наводим планшет AR на QR-код — и на плите вспыхивает пламя. Дети учатся, почему нельзя заливать водой горящее масло.</p>
-            <div class="kitchen-flame" aria-hidden="true"></div>
-          </article>
+    <!-- DANGER (продолжение) -->
+    <section class="section section--danger-continue" id="danger-continue">
+      <div class="section__bg" aria-hidden="true"></div>
+      <div class="container section--danger-continue__content">
+        <div class="journey__note reveal">
+          <p class="journey__note-said">– Тут мы и объясняем, почему нельзя заливать водой горящее масло или включенные электроприборы, – поясняет сотрудник МЧС.</p>
+          <p class="journey__note-lead">Рядом – зона бытовых опасностей. Здесь напоминают, что окна – не место для игр, горячая духовка может стать причиной ожогов, а острые углы мебели требуют осторожности.</p>
+          <p class="journey__note-lead">Дети играют на планшете в «Аптечку» – им нужно правильно собрать лекарства, например, в поход, проверить сроки годности и разобраться в назначении каждого препарата, рассказывает Карина Закалинская:</p>
+          <p class="journey__note-said journey__note-said--last">– Мы обязательно объясняем: самостоятельно принимать лекарства нельзя. Но ребенок должен понимать, что должно находиться в домашней аптечке и почему опасно использовать просроченные пилюли.</p>
+        </div>
+      </div>
+    </section>
 
-          <article class="danger-card danger-card--home">
-            <div class="danger-card__header">
-              <span class="danger-card__icon">⚠</span>
-              <h3>Бытовые опасности</h3>
-            </div>
-            <p>Окна — не место для игр, горячая духовка может стать причиной ожогов, острые углы требуют осторожности.</p>
-          </article>
+    <!-- VR -->
+    <section class="section section--vr" id="vr-training">
+      <div class="section__bg" aria-hidden="true"></div>
+      <div class="container section--vr__content">
+        <div class="journey__note reveal">
+          <p class="journey__note-lead">Еще несколько шагов – и дети по очереди надевают очки виртуальной реальности. Теперь они пассажиры автобуса, который сталкивается с грузовиком и переворачивается. Десятилетний Марьян Клакевич после прохождения тренажера признается:</p>
+          <p class="journey__note-said journey__note-said--last">– Все как по-настоящему. Когда автобус лег набок, я даже немного испугался. Но потом вспомнил, что сначала нужно отстегнуть ремень безопасности, осмотреться и искать выход. Теперь точно знаю, зачем всегда нужно пристегиваться.</p>
+        </div>
+      </div>
+    </section>
 
-          <article class="danger-card danger-card--medkit">
-            <div class="danger-card__header">
-              <span class="danger-card__icon">💊</span>
-              <h3>Игра «Аптечка»</h3>
-            </div>
-            <p>Собрать лекарства в поход, проверить сроки годности. Самостоятельно принимать лекарства нельзя — но ребёнок должен знать, что должно быть в домашней аптечке.</p>
-          </article>
-
-          <article class="danger-card danger-card--vr">
-            <div class="danger-card__header">
-              <span class="danger-card__icon">🥽</span>
-              <h3>VR-тренажёр</h3>
-            </div>
-            <blockquote class="mini-quote">
-              <p>Всё как по-настоящему. Когда автобус лёг набок, я даже немного испугался. Но потом вспомнил: сначала отстегнуть ремень, осмотреться и искать выход.</p>
-              <cite>— Марьян Клакевич, 10 лет</cite>
-            </blockquote>
-          </article>
-
-          <article class="danger-card danger-card--fire">
-            <div class="danger-card__header">
-              <span class="danger-card__icon">🏠</span>
-              <h3>Виртуальный пожар</h3>
-            </div>
-            <p>Два сценария: от удлинителя до сложной эвакуации — около пятнадцати действий: вызвать спасателей, обесточить квартиру, выбрать путь.</p>
-          </article>
-
-          <article class="danger-card danger-card--fraud danger-card--wide">
-            <div class="danger-card__header">
-              <span class="danger-card__icon">🛡</span>
-              <h3>Защита от мошенников</h3>
-            </div>
-            <p>На интерактивных планшетах моделируют схемы мошенничества. Дети учатся вовремя распознавать опасность: не сообщать данные карт, не открывать дверь посторонним.</p>
-          </article>
+    <!-- VIRTUAL FIRE -->
+    <section class="section section--virtual-fire" id="virtual-fire">
+      <div class="section__bg" aria-hidden="true"></div>
+      <div class="container section--virtual-fire__content">
+        <div class="journey__note reveal">
+          <p class="journey__note-lead">Одна из интересных локаций – виртуальный пожар в квартире с двумя сценариями. В первом загорается удлинитель, и пламя еще можно потушить самостоятельно. Во втором задания посложнее, поясняет сотрудник МЧС:</p>
+          <p class="journey__note-said journey__note-said--last">– Ребенку предстоит выполнить около пятнадцати действий: вызвать спасателей, обесточить квартиру, выбрать путь эвакуации. Мы стараемся довести алгоритм до автоматизма.</p>
         </div>
       </div>
     </section>
 
     <!-- ALGORITHM -->
     <section class="section section--algorithm" id="algorithm">
+      <div class="section__bg" aria-hidden="true"></div>
       <div class="section__header container reveal">
         <h2 class="section__title">Правильный алгоритм</h2>
         <div class="section__line"></div>
       </div>
 
-      <div class="labyrinth" aria-label="Имитация задымлённого лабиринта">
-        <div class="labyrinth__fog"></div>
-        <div class="labyrinth__content container">
-          <div class="labyrinth__rules reveal">
-            <h3>Правила перед входом</h3>
-            <ul class="rules-list">
-              <li><span>01</span> Пригнитесь</li>
-              <li><span>02</span> Дышите через локоть</li>
-              <li><span>03</span> Смотрите на указатели</li>
-              <li><span>04</span> Не теряйте группу</li>
-            </ul>
+      <div class="container algorithm-split reveal">
+        <div class="algorithm-split__col algorithm-split__col--left">
+          <div class="journey__note">
+            <p class="journey__note-lead journey__note-lead--last">Самые яркие эмоции – в сочлененной части автобуса, где находится лабиринт с имитацией задымленного помещения. Перед входом инструктор повторяет правила безопасности, но внутри многие забывают о них. 11-летняя Анна Ляшкевич выходит наружу заметно взволнованной:</p>
           </div>
-
-          <blockquote class="quote quote--labyrinth reveal">
-            <p>Я почти ничего не видела, шла на ощупь и старалась не потерять ребят впереди. Теперь понимаю, зачем пригибаться и смотреть на эвакуационные указатели. Было страшновато, но очень интересно.</p>
-            <cite>— Анна Ляшкевич, 11 лет</cite>
-          </blockquote>
-
-          <div class="algorithm-flow reveal">
-            <div class="algo-step">
-              <div class="algo-step__node">🌲</div>
-              <span>Лес</span>
-            </div>
-            <div class="algo-step__arrow"></div>
-            <div class="algo-step">
-              <div class="algo-step__node">💧</div>
-              <span>Вода</span>
-            </div>
-            <div class="algo-step__arrow"></div>
-            <div class="algo-step">
-              <div class="algo-step__node">❄️</div>
-              <span>Лёд</span>
-            </div>
-            <div class="algo-step__arrow"></div>
-            <div class="algo-step">
-              <div class="algo-step__node">⛺</div>
-              <span>Поход</span>
-            </div>
+        </div>
+        <div class="algorithm-split__col algorithm-split__col--right">
+          <div class="journey__note">
+            <p class="journey__note-said journey__note-said--last">– Я почти ничего не видела, шла на ощупь и старалась не потерять ребят впереди. Теперь понимаю, зачем пригибаться и смотреть на эвакуационные указатели. Было страшновато, но очень интересно.</p>
           </div>
-          <p class="labyrinth__nature reveal">Последний отсек посвящён отдыху на природе: безопасности в лесу, на воде и льду, в походе.</p>
-        </div>
-        <div class="labyrinth__exit-signs" aria-hidden="true">
-          <span class="exit-sign">← ВЫХОД</span>
-          <span class="exit-sign">ВЫХОД →</span>
-          <span class="exit-sign">↑ ВЫХОД</span>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="finale reveal">
-          <blockquote class="quote quote--finale">
-            <p>Наша задача — сделать так, чтобы правильный алгоритм действий стал для ребёнка привычным. Чтобы в экстренной ситуации он не растерялся, а вспомнил урок. Именно поэтому мы говорим о безопасности понятным ему языком — через технологии, которые детям действительно интересны.</p>
-            <cite>Карина Закалинская</cite>
-          </blockquote>
         </div>
       </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__author">
-        <p class="footer__name">Юлия МИЩЕНКО</p>
-        <p class="footer__pub">«ЗН» · <a href="mailto:mischenko@sb.by">mischenko@sb.by</a></p>
-        <p class="footer__photo">Фото Марии АМЕЛИНОЙ</p>
+    <!-- NATURE -->
+    <section class="section section--nature" id="nature">
+      <div class="section__bg" aria-hidden="true"></div>
+
+      <div class="photo-carousel reveal" aria-label="Фотогалерея мобильного центра МЧС">
+        <div class="photo-carousel__viewport">
+          <div class="photo-carousel__track" data-carousel-track>
+            <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Мобильный центр безопасности МЧС">
+              <img src="img/carousel/Мобильный центр МЧС 26-25-06-2026.jpg" alt="Мобильный центр безопасности МЧС" width="400" height="280" loading="lazy" decoding="async">
+            </button>
+            <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Занятия у мобильного центра МЧС">
+              <img src="img/carousel/Мобильный центр МЧС 27-25-06-2026.jpg" alt="Занятия у мобильного центра МЧС" width="400" height="280" loading="lazy" decoding="async">
+            </button>
+            <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Дети на экскурсии в центре безопасности">
+              <img src="img/carousel/Мобильный центр МЧС 28-25-06-2026.jpg" alt="Дети на экскурсии в центре безопасности" width="400" height="280" loading="lazy" decoding="async">
+            </button>
+            <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Интерактивное обучение в мобильном автобусе">
+              <img src="img/carousel/Мобильный центр МЧС 29-25-06-2026.jpg" alt="Интерактивное обучение в мобильном автобусе" width="400" height="280" loading="lazy" decoding="async">
+            </button>
+            <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Мобильный центр МЧС на площадке">
+              <img src="img/carousel/Мобильный центр МЧС 30-25-06-2026.jpg" alt="Мобильный центр МЧС на площадке" width="400" height="280" loading="lazy" decoding="async">
+            </button>
+            <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Тренировка в мобильном центре безопасности">
+              <img src="img/carousel/Мобильный центр МЧС 34-25-06-2026.jpg" alt="Тренировка в мобильном центре безопасности" width="400" height="280" loading="lazy" decoding="async">
+            </button>
+            <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Экскурсия по мобильному центру МЧС">
+              <img src="img/carousel/Мобильный центр МЧС 37-25-06-2026.jpg" alt="Экскурсия по мобильному центру МЧС" width="400" height="280" loading="lazy" decoding="async">
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="footer__brand">
-        <span>Дым, сирена, лабиринт</span>
-        <span class="footer__year">2026</span>
+
+      <div class="container section--nature__content">
+        <div class="journey__note reveal">
+          <p class="journey__note-lead">Последний отсек посвящен отдыху на природе: безопасности в лесу, на воде и льду, в походе.</p>
+          <p class="journey__note-lead">За время экскурсии дети получают знания, которые однажды могут спасти жизнь, уверена Карина Закалинская:</p>
+          <p class="journey__note-said journey__note-said--last">– Наша задача – сделать так, чтобы правильный алгоритм действий стал для ребенка привычным. Чтобы в экстренной ситуации он не растерялся, а вспомнил урок. Именно поэтому мы говорим о безопасности понятным ему языком – через технологии, которые детям действительно интересны.</p>
+        </div>
       </div>
+    </section>
+
+    <div class="projects-footer-band">
+      <div class="projects-footer-band__bg" aria-hidden="true">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-defer-src="img/projects.jpg" alt="" decoding="async">
+      </div>
+      <div class="projects-footer-band__overlay" aria-hidden="true"></div>
+
+      <section class="section projects-section" id="projects" aria-label="Живой репортаж — материалы">
+        <div class="projects-inner container">
+          <div class="section-header centered reveal">
+            <h2 class="section-title">Живой репортаж — материалы</h2>
+          </div>
+          <div class="projects-viewport reveal" data-autoplay="true" data-interval="5000">
+            <div class="projects-stage">
+              <a href="https://www.sb.by/sp/vypusknoj-tolko-dlya-devochek/" class="project-card" target="_blank" rel="noopener noreferrer">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-defer-src="img/projects/hero-1.jpg" alt="Выпускной только для девочек – так бывает?" width="560" height="350" decoding="async">
+                <div class="project-info">
+                  <h3>Выпускной только для девочек – так бывает?</h3>
+                </div>
+              </a>
+              <a href="https://www.sb.by/sp/poekhali-na-more-gerodota/" class="project-card is-active" target="_blank" rel="noopener noreferrer">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-defer-src="img/projects/family-bg.jpg" alt="Поехали на море… Геродота!" width="560" height="350" decoding="async">
+                <div class="project-info">
+                  <h3>Поехали на море… Геродота!</h3>
+                </div>
+              </a>
+              <a href="https://www.sb.by/sp/ne-prosto-ukrashenie/" class="project-card" target="_blank" rel="noopener noreferrer">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-defer-src="img/projects/hero-pc.webp" alt="Не просто украшение коллектива" width="560" height="350" decoding="async">
+                <div class="project-info">
+                  <h3>Не просто украшение коллектива</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="projects-footer reveal">
+            <a href="https://www.sb.by/articles/themes/spetsproekt-sb-nash-zhivoy-reportazh/" class="btn-all-projects" target="_blank" rel="noopener noreferrer">
+              Смотреть все материалы
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section footer-section" id="contact-footer">
+        <footer class="site-footer" role="contentinfo">
+          <div class="footer-content container">
+            <div class="footer-credits">
+              <p>
+                Автор:
+                <strong><a href="mailto:mischenko@sb.by" class="footer-credit-link">Юлия МИЩЕНКО</a></strong>
+              </p>
+              <p>
+                Фото:
+                <strong>Марии АМЕЛИНОЙ</strong>
+              </p>
+            </div>
+            <div class="footer-copy">
+              © Издательский дом «Беларусь сегодня»
+            </div>
+          </div>
+        </footer>
+      </section>
     </div>
-  </footer>
+  </main>
 
   <div class="gallery-lightbox" id="gallery-lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Просмотр фотографии">
     <div class="gallery-lightbox__backdrop" data-gallery-close></div>
