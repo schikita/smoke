@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/hero.png" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,7 +28,7 @@
       >
         <img
           src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E"
-          data-defer-src="img/logo.png"
+          data-lazy-src="img/logo.png"
           alt=""
           class="logo-img"
           width="40"
@@ -55,7 +56,7 @@
   <main>
     <!-- HERO -->
     <section class="hero" id="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__bg" data-bg="img/hero.png" aria-hidden="true"></div>
       <div class="hero__grid"></div>
       <div class="hero__content">
         <div class="hero__badge">
@@ -67,7 +68,6 @@
           <span class="hero__title-line hero__title-line--siren">сирена,</span>
           <span class="hero__title-line hero__title-line--maze">лабиринт</span>
         </h1>
-        <p class="hero__subtitle">Мобильный центр безопасности — обучение через технологии</p>
         <p class="hero__desc">Репортаж из недавно созданного мобильного центра безопасности жизнедеятельности МЧС в детском оздоровительном лагере «Планета»</p>
         <div class="hero__actions">
           <a href="#intro" class="btn btn--primary">Читать репортаж</a>
@@ -81,7 +81,7 @@
 
     <!-- INTRO -->
     <section class="intro" id="intro">
-      <div class="intro__bg" aria-hidden="true"></div>
+      <div class="intro__bg" data-bg="img/second.jpg" aria-hidden="true"></div>
       <div class="container intro__container">
         <blockquote class="quote quote--large">
           <span class="quote__mark">«</span>
@@ -96,7 +96,7 @@
 
     <!-- GADGETS -->
     <section class="section section--gadgets" id="gadgets">
-      <div class="section__bg" aria-hidden="true"></div>
+      <div class="section__bg" data-bg="img/gadgets-bg.jpg" aria-hidden="true"></div>
       <div class="section__header container reveal">
         <h2 class="section__title">Ставка на гаджеты</h2>
         <div class="section__line"></div>
@@ -107,19 +107,19 @@
           <div class="split__visual">
             <div class="mini-gallery" aria-label="Фотогалерея мобильного центра">
               <button type="button" class="mini-gallery__item mini-gallery__item--main" data-gallery-index="0" aria-label="Открыть фото: Мобильный центр безопасности МЧС">
-                <img src="img/galery/1.jpg" alt="Мобильный центр безопасности МЧС" width="600" height="400" loading="lazy" decoding="async">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/galery/1.jpg" alt="Мобильный центр безопасности МЧС" width="600" height="400" loading="lazy" decoding="async">
               </button>
               <button type="button" class="mini-gallery__item" data-gallery-index="1" aria-label="Открыть фото: Интерактивное обучение детей">
-                <img src="img/galery/2.jpg" alt="Интерактивное обучение детей" width="300" height="200" loading="lazy" decoding="async">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/galery/2.jpg" alt="Интерактивное обучение детей" width="300" height="200" loading="lazy" decoding="async">
               </button>
               <button type="button" class="mini-gallery__item" data-gallery-index="2" aria-label="Открыть фото: Тренажёры и технологии в центре">
-                <img src="img/galery/3.jpg" alt="Тренажёры и технологии в центре" width="300" height="200" loading="lazy" decoding="async">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/galery/3.jpg" alt="Тренажёры и технологии в центре" width="300" height="200" loading="lazy" decoding="async">
               </button>
               <button type="button" class="mini-gallery__item" data-gallery-index="3" aria-label="Открыть фото: Занятия в мобильном автобусе МЧС">
-                <img src="img/galery/4.jpg" alt="Занятия в мобильном автобусе МЧС" width="300" height="200" loading="lazy" decoding="async">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/galery/4.jpg" alt="Занятия в мобильном автобусе МЧС" width="300" height="200" loading="lazy" decoding="async">
               </button>
               <button type="button" class="mini-gallery__item" data-gallery-index="4" aria-label="Открыть фото: Интерактивная кухня и бытовые опасности">
-                <img src="img/galery/5.jpg" alt="Интерактивная кухня и бытовые опасности" width="300" height="200" loading="lazy" decoding="async">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/galery/5.jpg" alt="Интерактивная кухня и бытовые опасности" width="300" height="200" loading="lazy" decoding="async">
               </button>
             </div>
           </div>
@@ -138,17 +138,17 @@
           <div class="journey__steps">
             <div class="step-card step-card--photo">
               <div class="step-card__media">
-                <img src="img/driver/1.jpg" alt="Экипировка пожарного" width="400" height="260" loading="lazy" decoding="async">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/driver/1.jpg" alt="Экипировка пожарного" width="400" height="260" loading="lazy" decoding="async">
               </div>
             </div>
             <div class="step-card step-card--photo">
               <div class="step-card__media">
-                <img src="img/driver/2.jpg" alt="Вызов диспетчера" width="400" height="260" loading="lazy" decoding="async">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/driver/2.jpg" alt="Вызов диспетчера" width="400" height="260" loading="lazy" decoding="async">
               </div>
             </div>
             <div class="step-card step-card--photo">
               <div class="step-card__media">
-                <img src="img/driver/3.jpg" alt="Дознаватель на месте пожара" width="400" height="260" loading="lazy" decoding="async">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/driver/3.jpg" alt="Дознаватель на месте пожара" width="400" height="260" loading="lazy" decoding="async">
               </div>
             </div>
           </div>
@@ -162,7 +162,7 @@
 
     <!-- DANGER -->
     <section class="section section--danger" id="danger">
-      <div class="section__bg" aria-hidden="true"></div>
+      <div class="section__bg" data-bg="img/danger-bg.jpg" aria-hidden="true"></div>
       <div class="section__header container reveal">
         <h2 class="section__title">Распознать опасность</h2>
         <div class="section__line"></div>
@@ -172,7 +172,8 @@
         <div class="danger-split reveal">
           <figure class="danger-split__photo">
             <img
-              src="img/danger-training.jpg"
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E"
+              data-lazy-src="img/danger-training.jpg"
               alt="Спасатель МЧС обучает детей на мобильном центре безопасности"
               width="440"
               height="330"
@@ -192,7 +193,7 @@
 
     <!-- DANGER (продолжение) -->
     <section class="section section--danger-continue" id="danger-continue">
-      <div class="section__bg" aria-hidden="true"></div>
+      <div class="section__bg" data-bg="img/danger-zakalinskaya.jpg" aria-hidden="true"></div>
       <div class="container section--danger-continue__content">
         <div class="journey__note reveal">
           <p class="journey__note-said">– Тут мы и объясняем, почему нельзя заливать водой горящее масло или включенные электроприборы, – поясняет сотрудник МЧС.</p>
@@ -205,7 +206,7 @@
 
     <!-- VR -->
     <section class="section section--vr" id="vr-training">
-      <div class="section__bg" aria-hidden="true"></div>
+      <div class="section__bg" data-bg="img/vr-training.jpg" aria-hidden="true"></div>
       <div class="container section--vr__content">
         <div class="journey__note reveal">
           <p class="journey__note-lead">Еще несколько шагов – и дети по очереди надевают очки виртуальной реальности. Теперь они пассажиры автобуса, который сталкивается с грузовиком и переворачивается. Десятилетний Марьян Клакевич после прохождения тренажера признается:</p>
@@ -216,7 +217,7 @@
 
     <!-- VIRTUAL FIRE -->
     <section class="section section--virtual-fire" id="virtual-fire">
-      <div class="section__bg" aria-hidden="true"></div>
+      <div class="section__bg" data-bg="img/virtual-fire.jpg" aria-hidden="true"></div>
       <div class="container section--virtual-fire__content">
         <div class="journey__note reveal">
           <p class="journey__note-lead">Одна из интересных локаций – виртуальный пожар в квартире с двумя сценариями. В первом загорается удлинитель, и пламя еще можно потушить самостоятельно. Во втором задания посложнее, поясняет сотрудник МЧС:</p>
@@ -227,7 +228,7 @@
 
     <!-- ALGORITHM -->
     <section class="section section--algorithm" id="algorithm">
-      <div class="section__bg" aria-hidden="true"></div>
+      <div class="section__bg" data-bg="img/labyrinth-bg.jpg" aria-hidden="true"></div>
       <div class="section__header container reveal">
         <h2 class="section__title">Правильный алгоритм</h2>
         <div class="section__line"></div>
@@ -249,31 +250,31 @@
 
     <!-- NATURE -->
     <section class="section section--nature" id="nature">
-      <div class="section__bg" aria-hidden="true"></div>
+      <div class="section__bg" data-bg="img/nature-bg.jpg" aria-hidden="true"></div>
 
       <div class="photo-carousel reveal" aria-label="Фотогалерея мобильного центра МЧС">
         <div class="photo-carousel__viewport">
           <div class="photo-carousel__track" data-carousel-track>
             <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Мобильный центр безопасности МЧС">
-              <img src="img/carousel/Мобильный центр МЧС 26-25-06-2026.jpg" alt="Мобильный центр безопасности МЧС" width="400" height="280" loading="lazy" decoding="async">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/carousel/Мобильный центр МЧС 26-25-06-2026.jpg" alt="Мобильный центр безопасности МЧС" width="400" height="280" loading="lazy" decoding="async">
             </button>
             <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Занятия у мобильного центра МЧС">
-              <img src="img/carousel/Мобильный центр МЧС 27-25-06-2026.jpg" alt="Занятия у мобильного центра МЧС" width="400" height="280" loading="lazy" decoding="async">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/carousel/Мобильный центр МЧС 27-25-06-2026.jpg" alt="Занятия у мобильного центра МЧС" width="400" height="280" loading="lazy" decoding="async">
             </button>
             <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Дети на экскурсии в центре безопасности">
-              <img src="img/carousel/Мобильный центр МЧС 28-25-06-2026.jpg" alt="Дети на экскурсии в центре безопасности" width="400" height="280" loading="lazy" decoding="async">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/carousel/Мобильный центр МЧС 28-25-06-2026.jpg" alt="Дети на экскурсии в центре безопасности" width="400" height="280" loading="lazy" decoding="async">
             </button>
             <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Интерактивное обучение в мобильном автобусе">
-              <img src="img/carousel/Мобильный центр МЧС 29-25-06-2026.jpg" alt="Интерактивное обучение в мобильном автобусе" width="400" height="280" loading="lazy" decoding="async">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/carousel/Мобильный центр МЧС 29-25-06-2026.jpg" alt="Интерактивное обучение в мобильном автобусе" width="400" height="280" loading="lazy" decoding="async">
             </button>
             <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Мобильный центр МЧС на площадке">
-              <img src="img/carousel/Мобильный центр МЧС 30-25-06-2026.jpg" alt="Мобильный центр МЧС на площадке" width="400" height="280" loading="lazy" decoding="async">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/carousel/Мобильный центр МЧС 30-25-06-2026.jpg" alt="Мобильный центр МЧС на площадке" width="400" height="280" loading="lazy" decoding="async">
             </button>
             <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Тренировка в мобильном центре безопасности">
-              <img src="img/carousel/Мобильный центр МЧС 34-25-06-2026.jpg" alt="Тренировка в мобильном центре безопасности" width="400" height="280" loading="lazy" decoding="async">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/carousel/Мобильный центр МЧС 34-25-06-2026.jpg" alt="Тренировка в мобильном центре безопасности" width="400" height="280" loading="lazy" decoding="async">
             </button>
             <button type="button" class="photo-carousel__slide" data-gallery-item aria-label="Открыть фото: Экскурсия по мобильному центру МЧС">
-              <img src="img/carousel/Мобильный центр МЧС 37-25-06-2026.jpg" alt="Экскурсия по мобильному центру МЧС" width="400" height="280" loading="lazy" decoding="async">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/carousel/Мобильный центр МЧС 37-25-06-2026.jpg" alt="Экскурсия по мобильному центру МЧС" width="400" height="280" loading="lazy" decoding="async">
             </button>
           </div>
         </div>
@@ -290,7 +291,7 @@
 
     <div class="projects-footer-band">
       <div class="projects-footer-band__bg" aria-hidden="true">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-defer-src="img/projects.jpg" alt="" decoding="async">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/projects.jpg" alt="" decoding="async">
       </div>
       <div class="projects-footer-band__overlay" aria-hidden="true"></div>
 
@@ -301,22 +302,22 @@
           </div>
           <div class="projects-viewport reveal" data-autoplay="true" data-interval="5000">
             <div class="projects-stage">
-              <a href="https://www.sb.by/sp/vypusknoj-tolko-dlya-devochek/" class="project-card" target="_blank" rel="noopener noreferrer">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-defer-src="img/projects/hero-1.jpg" alt="Выпускной только для девочек – так бывает?" width="560" height="350" decoding="async">
+              <a href="https://www.sb.by/sp/vizit-k-bolotnym-duham/" class="project-card" target="_blank" rel="noopener noreferrer">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/projects/bolotnye-duhi.webp" alt="Визит к болотным духам" width="560" height="350" decoding="async">
                 <div class="project-info">
-                  <h3>Выпускной только для девочек – так бывает?</h3>
+                  <h3>Визит к болотным духам</h3>
                 </div>
               </a>
-              <a href="https://www.sb.by/sp/poekhali-na-more-gerodota/" class="project-card is-active" target="_blank" rel="noopener noreferrer">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-defer-src="img/projects/family-bg.jpg" alt="Поехали на море… Геродота!" width="560" height="350" decoding="async">
+              <a href="https://www.sb.by/sp/shashlyki/" class="project-card is-active" target="_blank" rel="noopener noreferrer">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/projects/shashlyki.jpg" alt="Из чего сделать шашлык?" width="560" height="350" decoding="async">
                 <div class="project-info">
-                  <h3>Поехали на море… Геродота!</h3>
+                  <h3>Из чего сделать шашлык?</h3>
                 </div>
               </a>
-              <a href="https://www.sb.by/sp/ne-prosto-ukrashenie/" class="project-card" target="_blank" rel="noopener noreferrer">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-defer-src="img/projects/hero-pc.webp" alt="Не просто украшение коллектива" width="560" height="350" decoding="async">
+              <a href="https://www.sb.by/sp/barber/" class="project-card" target="_blank" rel="noopener noreferrer">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E" data-lazy-src="img/projects/barber-hero.jpg" alt="Игорь — руки-ножницы" width="560" height="350" decoding="async">
                 <div class="project-info">
-                  <h3>Не просто украшение коллектива</h3>
+                  <h3>Игорь — руки-ножницы</h3>
                 </div>
               </a>
             </div>
@@ -335,11 +336,11 @@
             <div class="footer-credits">
               <p>
                 Автор:
-                <strong><a href="mailto:mischenko@sb.by" class="footer-credit-link">Юлия МИЩЕНКО</a></strong>
+                <strong><a href="https://www.sb.by/author/1413772-yuliya-mishchenko/" class="footer-credit-link" target="_blank" rel="noopener noreferrer">Юлия МИЩЕНКО</a></strong>
               </p>
               <p>
                 Фото:
-                <strong>Марии АМЕЛИНОЙ</strong>
+                <strong><a href="https://www.sb.by/author/photographers/1292179-mariya-amelina-/" class="footer-credit-link" target="_blank" rel="noopener noreferrer">Марии АМЕЛИНОЙ</a></strong>
               </p>
             </div>
             <div class="footer-copy">

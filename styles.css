@@ -249,7 +249,7 @@ img { max-width: 100%; display: block; }
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url('img/hero.png');
+  background-image: var(--section-bg, none);
   background-size: cover;
   background-position: 68% center;
   background-repeat: no-repeat;
@@ -446,18 +446,18 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 1;
   min-height: clamp(680px, 85vh, 920px);
-  padding: clamp(6rem, 14vh, 10rem) 0;
+  padding: clamp(4rem, 10vh, 6rem) 0 clamp(2rem, 5vh, 3rem);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   overflow: hidden;
 }
 
 .intro__bg {
   position: absolute;
   inset: 0;
-  background-image: url('img/second.jpg');
+  background-image: var(--section-bg, none);
   background-size: cover;
-  background-position: 32% center;
+  background-position: 38% 22%;
   background-repeat: no-repeat;
 }
 
@@ -465,21 +465,30 @@ img { max-width: 100%; display: block; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to left,
-    rgba(10, 14, 20, 0.92) 0%,
-    rgba(10, 14, 20, 0.7) 22%,
-    rgba(10, 14, 20, 0.3) 42%,
-    transparent 52%
-  );
+  background:
+    linear-gradient(
+      to left,
+      rgba(10, 14, 20, 0.82) 0%,
+      rgba(10, 14, 20, 0.45) 24%,
+      rgba(10, 14, 20, 0.08) 42%,
+      transparent 52%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(10, 14, 20, 0.15) 0%,
+      rgba(10, 14, 20, 0.05) 38%,
+      rgba(10, 14, 20, 0.25) 62%,
+      rgba(10, 14, 20, 0.75) 88%,
+      rgba(10, 14, 20, 0.88) 100%
+    );
 }
 
 .intro__container {
   position: relative;
   z-index: 2;
-  width: min(720px, 82vw);
+  width: min(480px, 52vw);
   margin-left: auto;
-  margin-right: clamp(1.5rem, 6vw, 5rem);
+  margin-right: clamp(1.25rem, 4vw, 3rem);
 }
 
 .intro .quote {
@@ -505,10 +514,10 @@ img { max-width: 100%; display: block; }
 }
 
 .quote--large {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-size: clamp(1.15rem, 2.6vw, 1.55rem);
   font-weight: 600;
   line-height: 1.4;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .quote__mark {
@@ -556,7 +565,7 @@ img { max-width: 100%; display: block; }
 .section--gadgets .section__bg {
   position: absolute;
   inset: 0;
-  background-image: url('img/gadgets-bg.jpg');
+  background-image: var(--section-bg, none);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -600,7 +609,7 @@ img { max-width: 100%; display: block; }
 .section--danger .section__bg {
   position: absolute;
   inset: 0;
-  background-image: url('img/danger-bg.jpg');
+  background-image: var(--section-bg, none);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -669,7 +678,7 @@ img { max-width: 100%; display: block; }
 .section--danger-continue .section__bg {
   position: absolute;
   inset: 0;
-  background-image: url('img/danger-zakalinskaya.jpg');
+  background-image: var(--section-bg, none);
   background-size: cover;
   background-position: center 20%;
   background-repeat: no-repeat;
@@ -715,7 +724,7 @@ img { max-width: 100%; display: block; }
 .section--vr .section__bg {
   position: absolute;
   inset: 0;
-  background-image: url('img/vr-training.jpg');
+  background-image: var(--section-bg, none);
   background-size: cover;
   background-position: 72% center;
   background-repeat: no-repeat;
@@ -771,7 +780,7 @@ img { max-width: 100%; display: block; }
 .section--virtual-fire .section__bg {
   position: absolute;
   inset: 0;
-  background-image: url('img/virtual-fire.jpg');
+  background-image: var(--section-bg, none);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -814,7 +823,7 @@ img { max-width: 100%; display: block; }
 .section--algorithm .section__bg {
   position: absolute;
   inset: 0;
-  background-image: url('img/labyrinth-bg.jpg');
+  background-image: var(--section-bg, none);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -881,7 +890,7 @@ img { max-width: 100%; display: block; }
 .section--nature .section__bg {
   position: absolute;
   inset: 0;
-  background-image: url('img/nature-bg.jpg');
+  background-image: var(--section-bg, none);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1808,6 +1817,7 @@ img { max-width: 100%; display: block; }
 .project-info {
   padding: 1.25rem 1.5rem 1.5rem;
   background: rgba(18, 24, 32, 0.92);
+  text-align: center;
 }
 
 .project-info h3 {
@@ -1816,6 +1826,7 @@ img { max-width: 100%; display: block; }
   line-height: 1.4;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .project-card.is-prev {
@@ -1915,7 +1926,13 @@ img { max-width: 100%; display: block; }
   text-align: right;
 }
 
-/* ===== REVEAL ANIMATION ===== */
+[data-bg] {
+  transition: opacity 0.45s ease;
+}
+
+img[data-lazy-src] {
+  background-color: rgba(18, 24, 32, 0.5);
+}
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -1983,15 +2000,16 @@ img { max-width: 100%; display: block; }
 
   .intro {
     min-height: clamp(560px, 92vh, 760px);
-    padding: 5rem 0;
+    padding: 5rem 0 2rem;
+    align-items: flex-end;
   }
 
   .intro__bg {
-    background-position: 40% center;
+    background-position: 42% 18%;
   }
 
   .intro__container {
-    width: min(720px, 92vw);
+    width: min(560px, 92vw);
     margin-left: auto;
     margin-right: clamp(1rem, 4vw, 2rem);
   }
