@@ -662,6 +662,7 @@ img { max-width: 100%; display: block; }
 }
 
 .section--danger .journey__note-lead--last {
+  margin-top: 1.25rem;
   margin-bottom: 0;
 }
 
@@ -705,6 +706,10 @@ img { max-width: 100%; display: block; }
 .section--danger-continue .journey__note {
   background: rgba(18, 24, 32, 0.82);
   backdrop-filter: blur(10px);
+}
+
+.section--danger-continue .journey__note-said + .journey__note-lead {
+  margin-top: 1.25rem;
 }
 
 .section--danger-continue .journey__note-said--last {
