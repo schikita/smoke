@@ -714,7 +714,7 @@ img { max-width: 100%; display: block; }
 .section--vr {
   position: relative;
   overflow: hidden;
-  min-height: clamp(560px, 70vh, 800px);
+  min-height: clamp(680px, 85vh, 960px);
   padding: 0 0 3rem;
   display: flex;
   align-items: flex-end;
@@ -726,7 +726,7 @@ img { max-width: 100%; display: block; }
   inset: 0;
   background-image: var(--section-bg, none);
   background-size: cover;
-  background-position: 72% center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -2067,7 +2067,7 @@ img[data-lazy-src] {
   }
 
   .section--vr {
-    min-height: clamp(520px, 80vh, 720px);
+    min-height: clamp(600px, 88vh, 860px);
     padding-bottom: 2rem;
   }
 
