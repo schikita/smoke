@@ -95,6 +95,24 @@
     lastScroll = scrollY;
   }, { passive: true });
 
+  // ===== MOVE TO TOP =====
+  const moveToTopBtn = document.getElementById('move-to-top');
+
+  if (moveToTopBtn) {
+    const toggleMoveToTop = () => {
+      const show = window.scrollY > 500;
+      moveToTopBtn.hidden = !show;
+      moveToTopBtn.classList.toggle('is-visible', show);
+    };
+
+    window.addEventListener('scroll', toggleMoveToTop, { passive: true });
+    toggleMoveToTop();
+
+    moveToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
   // ===== MOBILE NAV =====
   const navToggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('nav');
